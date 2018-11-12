@@ -1,9 +1,10 @@
+
 <?php
 include 'connection.php';
 if(isset($_POST['search'])){
     
     $key = $_POST['search'];
-    $query = "SELECT * FROM pokemon WHERE Name LIKE '%{$key}%' LIMIT 5";
+    $query = "SELECT * FROM pokemon WHERE Name LIKE '%{$key}%' LIMIT 4";
     $res = mysqli_query($conn, $query);
     while($row = mysqli_fetch_assoc($res))
     { ?>
